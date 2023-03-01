@@ -1,0 +1,32 @@
+.pageName{
+    color: white;
+     font-size: 50px;
+     font-weight: bold;
+     padding: 250px 300px;
+     text-align: center;
+     text-shadow: #46453f 1px 0 10px;
+     position: relative;
+ }
+ 
+ .pageBanner-img{
+     width: 100%;
+     height: 500px;
+     -webkit-filter: blur(0.5px) brightness(0.6);
+     z-index: -1;
+     position: absolute;
+     object-fit: cover;
+ }
+ 
+ .pageBanner{
+   justify-content: center;
+   align-items: center;
+   height: 500px;
+   width: 100%;
+ }
+
+ @media screen and (max-width:980px) {
+    .pageName{
+        font-size: 40px;
+        padding: 250px 100px;
+    }
+ }

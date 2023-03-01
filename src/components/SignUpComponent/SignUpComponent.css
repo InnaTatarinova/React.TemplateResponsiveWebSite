@@ -1,0 +1,64 @@
+.signUp-conteiner{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.signUp-main-form{
+    width: 700px;
+    height: 500px;
+    background-color: white;
+    border: 2px white solid;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+  
+.signUp-btn-conteiner{
+    float: right;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+}
+
+.signUp-btn-activ{
+    text-decoration: black solid 3px;
+}
+
+.formRegistrandSignUp{
+    width: 600px;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.formRegistr-input{
+    width: 500px;
+    height: 50px;
+    border-radius: 8px;
+    margin: 20px 20px 10px;
+    font-size: 20px;
+}
+
+.infoSuccess{
+    color: rgb(13, 156, 13);
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.infoMistake{
+    color:red;
+    font-size: 16px;
+    text-align: center;
+    border-color: red;
+}

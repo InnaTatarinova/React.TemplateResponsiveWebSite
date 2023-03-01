@@ -1,0 +1,140 @@
+.infoCards {
+  background-color: white;
+  padding: 100px 30px 10px 30px;
+  width: 100%;
+}
+
+.infoCard-title {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.infoCard-list {
+  display: flex;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: space-around;
+  padding-top: 80px;  
+ 
+
+}
+
+.cardItem-conteiner {
+  width: 37%;
+  height: 30%;
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+  -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  flex-flow: column;
+  margin-bottom: 100px;
+}
+
+.cardItem-conteiner:nth-last-child(-n+3){
+    width: 30%;
+}
+
+.cardItem-pic{
+    position: relative;
+    height: 50%;
+}
+
+
+.cardItem-pic::after {
+  content: attr(data-category);
+  bottom: 0;
+  margin-left: 10px;
+  padding: 6px 8px;
+  max-width: calc((100%) - 60px);
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #1f98f4;
+  box-sizing: border-box;
+  position: absolute;
+
+}
+
+.cardItem-conteiner:hover {
+  transform: scale(1.1);
+}
+
+.cardItem-img {
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  transition: all 0.2s linear;
+}
+
+.cardItem-text {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+  padding-top: 20px;
+  font-size: 30px;
+}
+
+.cardItem-link {
+  text-decoration: none;
+}
+
+.cards__item__pic-wrap::after {
+  content: attr(data-category);
+  position: absolute;
+  bottom: 0;
+  margin-left: 10px;
+  padding: 6px 8px;
+  max-width: calc((100%) - 60px);
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #1f98f4;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width:1280px) {
+
+    .cardItem-pic{
+        position: relative;
+        height: 50%;
+    }
+
+    .cardItem-text{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:980px) {
+
+    .cardItem-conteiner{
+        width: 80%;
+    }
+
+    .cardItem-pic{
+        position: relative;
+        height: 50%;
+    }
+
+    .cardItem-text{
+        font-size: 25px;
+    }
+
+    .cardItem-conteiner:nth-last-child(-n+3){
+        width: 80%;
+    }
+    
+}

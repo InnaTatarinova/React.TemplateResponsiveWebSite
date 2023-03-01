@@ -1,0 +1,30 @@
+.listOfLink-container {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  width: 300px;
+}
+
+.listOfLink-container > a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  width: 150px;
+  margin-left: 10px;
+}
+
+.listOfLink-container > a:hover {
+  color: white;
+  border-bottom: 4px solid #fff;
+  transition: all 0.5s ease-out;
+}
+
+.bi {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 980px) {
+  .listOfLink-container {
+    margin: 0px;
+  }
+}
