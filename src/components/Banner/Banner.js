@@ -8,6 +8,7 @@ import banner4 from "../../assets/img/banner_4.jpg";
 import banner5 from "../../assets/img/banner_5.jpg";
 import banner6 from "../../assets/img/banner_6.jpg";
 import banner7 from "../../assets/img/banner_7.jpg";
+import { Link } from "react-router-dom";
 
 const imageList = [
   banner1,
@@ -45,23 +46,25 @@ export const Banner = () => {
         <h1 className="container-h1">Trip is waiting you...</h1>
         <p className="container-p"> But WHAT are YOU waiting for?</p>
         <div className="container-btn">
-          <ButtonComponent
-            className="btn"
-            btnStyle="btn-outline"
-            btnSize="btn-large"
-            path = "/products"
-          >
-            GET STARTED
-          </ButtonComponent>
-          <ButtonComponent
-            className="btn"
-            btnStyle="btn-standart"
-            btnSize="btn-large"
-            path="/"
-          >
-            WATCH TRAILER
-            <i className="bi bi-play-circle-fill" path="/"></i>
-          </ButtonComponent>
+          <Link to="/products">
+            <ButtonComponent
+              className="btn"
+              btnStyle="btn-outline"
+              btnSize="btn-large"
+            >
+              GET STARTED
+            </ButtonComponent>
+          </Link>
+          <Link to="/services">
+            <ButtonComponent
+              className="btn"
+              btnStyle="btn-standart"
+              btnSize="btn-large"
+            >
+              WATCH TRAILER
+              <i className="bi bi-play-circle-fill" path="/"></i>
+            </ButtonComponent>
+          </Link>
         </div>
       </div>
     </div>

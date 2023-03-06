@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./SignUpComponent.css";
 import "../ButtonComponent/ButtonComponent.css";
-
+import ButtonComponent from "../ButtonComponent/ButtonComponent";
 
 export const SignUpComponent = () => {
   const [signUpBtn, clickSignUpBtn] = useState(true);
-  const [registerBtn, clickRegisterBtn] = useState(false);
 
-   const handleClick = (e) => {
-    e.preventDefault();
-          clickSignUpBtn(!signUpBtn);
+  const handleClick = () => {
+    clickSignUpBtn(!signUpBtn);
   };
 
   return (
@@ -17,86 +15,91 @@ export const SignUpComponent = () => {
       <div className="signUp-main-form">
         <div className="signUp-btn-conteiner">
           {signUpBtn !== true ? (
-            <button
-              // className="btn"
-              // btnStyle="btn-standart"
-              // btnSize="btn-large"
-              // path="/"
-              // // onClick={openSignUpForm}
+            <ButtonComponent
+              className="btn"
+              btnStyle="btn-standart"
+              btnSize="btn-large"
               onClick={handleClick}
+              type="submit"
             >
               Sign up
-            </button>
+            </ButtonComponent>
           ) : (
-            <button
-              // className="btn"
-              // btnStyle="btn-standart"
-              // btnSize="btn-large"
-              // path="/"
-              // // onClick={openRegisterForm}
+            <ButtonComponent
+              className="btn"
+              btnStyle="btn-standart"
+              btnSize="btn-large"
               onClick={handleClick}
             >
               Registration
-            </button>
+            </ButtonComponent>
           )}
         </div>
+
         <div>
           {signUpBtn === true ? (
-            <form className="formRegistrandSignUp">
+            <form className="formForData">
               <h1>Sign Up</h1>
               <input
                 className="formRegistr-input"
                 placeholder="Email"
                 type="email"
-                // onChange={this.changeEmail.bind(this)}
-                // value={this.state.email}
+                required
               ></input>
               <input
                 className="formRegistr-input"
                 placeholder="Password"
                 type="password"
-                // onChange={this.changeEmail.bind(this)}
-                // value={this.state.email}
+                required
               ></input>
+              <div className="btn-submit">
+                <ButtonComponent
+                  className="btn"
+                  btnStyle="btn-standart-black"
+                  btnSize="btn-large"
+                  btnForm= "btn-ellipse"
+                  type="submit"
+                >
+                  Sign up
+                </ButtonComponent>
+              </div>
             </form>
           ) : (
-            <form className="formRegistrandSignUp">
+            <form className="formForData">
               <h1>Register now</h1>
               <input
                 className="formRegistr-input"
                 placeholder="First name"
-                // onChange={this.changeFirstName.bind(this)}
-                // value={this.state.firstName}
+                required
               ></input>
-              {/* {this.state.wasClickedonsubmitBtn &&
-          !this.state.validFirstName ? (
-            <div className="infoMistake">Enter valid first name</div>
-          ) : null} */}
               <input
                 className="formRegistr-input"
                 placeholder="Last name"
-                // onChange={this.changeLastName.bind(this)}
-                // value={this.state.lastName}
+                required
               ></input>
-              {/* {this.state.wasClickedonsubmitBtn && !this.state.validLastName ? (
-            <div className="infoMistake">Enter valid last name</div>
-          ) : null} */}
               <input
                 className="formRegistr-input"
                 placeholder="Email"
                 type="email"
-                // onChange={this.changeEmail.bind(this)}
-                // value={this.state.email}
+                required
               ></input>
-              {/* {this.state.wasClickedonsubmitBtn && !this.state.validEmail ? (
-            <div className="infoMistake">Enter valid email name</div>
-          ) : null} */}
-              {/* <ButtonComponent className="btn" btnStyle="btn-standart">
-                {" "}
-                Register
-              </ButtonComponent> */}
-              {/* // onClick={this.handleSubmit.bind(this)}
-            // className="formRegistr-button .formRegistr-input"  */}
+              <input
+                className="formRegistr-input"
+                placeholder="Password"
+                type="password"
+                required
+              ></input>
+              <div className="btn-submit">
+                <ButtonComponent
+                  className="btn"
+                  btnStyle="btn-standart-black"
+                  btnSize="btn-large"
+                  btnForm= "btn-ellipse"
+                  type="submit"
+                >
+                 Register
+                </ButtonComponent>
+              </div>
             </form>
           )}
         </div>

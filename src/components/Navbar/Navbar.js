@@ -78,9 +78,11 @@ const Navbar = () => {
         </ul>
 
         {button && (
-          // <Link path="/sign-up">
-            <ButtonComponent btnStyle="btn-outline" path='/sign-up' >SIGN UP</ButtonComponent>
-          // </Link>
+          <Link to="/sign-up">
+            <ButtonComponent btnStyle="btn-outline" path="/sign-up">
+              SIGN UP
+            </ButtonComponent>
+          </Link>
         )}
       </div>
     </div>
