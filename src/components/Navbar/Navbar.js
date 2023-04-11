@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import ButtonComponent from "../ButtonComponent/ButtonComponent";
+import {ButtonComponent} from "../ButtonComponent/ButtonComponent";
 import "./Navbar.css";
 
 const logo = require("../../assets/logo.jpg");

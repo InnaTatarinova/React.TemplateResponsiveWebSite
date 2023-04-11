@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ButtonComponent from "../ButtonComponent/ButtonComponent";
+import {ButtonComponent} from "../ButtonComponent/ButtonComponent";
 import "./Banner.css";
 import banner1 from "../../assets/img/banner_1.jpg";
 import banner2 from "../../assets/img/banner_2.jpg";
@@ -39,16 +39,16 @@ export const Banner = () => {
     <div>
       <div className="banner-container">
         <img
-          className="container-img"
+          className="banner-img"
           src={imageList[imageIndex]}
           alt="nature view"
         />
-        <h1 className="container-h1">Trip is waiting you...</h1>
-        <p className="container-p"> But WHAT are YOU waiting for?</p>
-        <div className="container-btn">
+        <h1 className="banner-h1">Trip is waiting you...</h1>
+        <p className="banner-p"> But WHAT are YOU waiting for?</p>
+        <div className="banner-btn-conteiner">
           <Link to="/products">
             <ButtonComponent
-              className="btn"
+              className="banner-btn"
               btnStyle="btn-outline"
               btnSize="btn-large"
             >
@@ -57,7 +57,7 @@ export const Banner = () => {
           </Link>
           <Link to="/services">
             <ButtonComponent
-              className="btn"
+              className="banner-btn"
               btnStyle="btn-standart"
               btnSize="btn-large"
             >

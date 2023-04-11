@@ -3,9 +3,10 @@ import "./App.css";
 import { Home } from "./pages/Home";
 import Navbar from "./components/Navbar/Navbar";
 import { Products } from "./pages/Products";
-import { Services } from "./pages/Services";
+import { Services}  from "./pages/Services";
 import { SignUp } from "./pages/SignUp";
 import { Footer } from "./components/Footer/Footer";
+
 
 function App() {
   return (

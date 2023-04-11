@@ -64,3 +64,25 @@
 .btn-submit{
     margin-top: 20px;
 }
+
+@media screen and (max-width: 768px){
+    .signUp-main-form{
+        width: 500px
+    }
+
+    .formForData{
+        width: 400px;
+
+    }
+
+    .formRegistr-input{
+        width: 300px
+    }
+
+
+
+
+};
+    
+
+

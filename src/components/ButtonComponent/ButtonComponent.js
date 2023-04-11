@@ -1,10 +1,11 @@
 import React from "react";
 import "./ButtonComponent.css";
 
-const ButtonComponent = ({ children, btnStyle, btnSize, btnForm, onClick}) => {
-  const STYLES = ["btn-standart","btn-standart-black", "btn-outline", "btn-test"];
-  const SIZES = ["btn-medium", "btn-large"];
+export const ButtonComponent = ({ children, className, btnStyle, btnSize, btnForm, onClick}) => {
+  const STYLES = ["btn-standart","btn-standart-black","btn-standart-blue", "btn-outline", "btn-test"];
+  const SIZES = ["btn-medium", "btn-small","btn-large"];
   const FORM = ["btn-rectangle","btn-ellipse"];
+  const CLASSNAME =["", "banner-btn", "footer-subscribe-btn", "btnServiceList"];
 
   const checkBtnStyle = STYLES.includes(btnStyle) ? btnStyle : STYLES[0];
 
@@ -12,13 +13,13 @@ const ButtonComponent = ({ children, btnStyle, btnSize, btnForm, onClick}) => {
 
   const checkBtnForm = FORM.includes(btnForm) ? btnForm : FORM[0];
 
-
+  const checkBtnClassName = CLASSNAME.includes(className) ? className : CLASSNAME[0];
 
   return (
     
         <button
         onClick={onClick}
-        className={`btn ${checkBtnStyle} ${checkBtnSize} ${checkBtnForm}`}
+        className={`btnMain ${checkBtnClassName} ${checkBtnStyle} ${checkBtnSize} ${checkBtnForm}`}
       >
         {children}
       </button>
@@ -26,4 +27,3 @@ const ButtonComponent = ({ children, btnStyle, btnSize, btnForm, onClick}) => {
   );
 };
 
-export default ButtonComponent;

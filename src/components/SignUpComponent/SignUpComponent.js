@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./SignUpComponent.css";
 import "../ButtonComponent/ButtonComponent.css";
-import ButtonComponent from "../ButtonComponent/ButtonComponent";
+import {ButtonComponent} from "../ButtonComponent/ButtonComponent";
 
 export const SignUpComponent = () => {
   const [signUpBtn, clickSignUpBtn] = useState(true);
@@ -16,17 +16,15 @@ export const SignUpComponent = () => {
         <div className="signUp-btn-conteiner">
           {signUpBtn !== true ? (
             <ButtonComponent
-              className="btn"
               btnStyle="btn-standart"
               btnSize="btn-large"
               onClick={handleClick}
-              type="submit"
+             
             >
               Sign up
             </ButtonComponent>
           ) : (
             <ButtonComponent
-              className="btn"
               btnStyle="btn-standart"
               btnSize="btn-large"
               onClick={handleClick}
@@ -54,7 +52,6 @@ export const SignUpComponent = () => {
               ></input>
               <div className="btn-submit">
                 <ButtonComponent
-                  className="btn"
                   btnStyle="btn-standart-black"
                   btnSize="btn-large"
                   btnForm= "btn-ellipse"
@@ -91,7 +88,6 @@ export const SignUpComponent = () => {
               ></input>
               <div className="btn-submit">
                 <ButtonComponent
-                  className="btn"
                   btnStyle="btn-standart-black"
                   btnSize="btn-large"
                   btnForm= "btn-ellipse"

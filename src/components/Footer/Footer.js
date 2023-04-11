@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import ButtonComponent from "../ButtonComponent/ButtonComponent";
+import {ButtonComponent} from "../ButtonComponent/ButtonComponent";
 import { ListOfLinks } from "../ListOfLinks/ListOfLinks";
 
 const aboutUs = ["How we work", "Our managers", "Career", "Term of Service"];
@@ -17,17 +17,17 @@ export const Footer = () => {
   return (
     <div className="footer-container">
       <section className="footer-subscribe">
-        <h1>Join to receive our best trip offers</h1>
-        <h3>You can subscribe in any time :)</h3>
+        <h1 className="footer-h1">Join to receive our best trip offers</h1>
+        <h2 className="footer-h2">You can subscribe in any time :)</h2>
         <input
           placeholder="Your email"
           className="footer-subscribe-input"
         ></input>
-        <ButtonComponent btnStyle="btn-outline" path="/">
+        <ButtonComponent className="footer-subscribe-btn"btnStyle="btn-outline" path="/">
           SUBSCRIBE
         </ButtonComponent>
       </section>
-      <section className="section-links">
+      <section className="footer-section-links">
         <ListOfLinks title="About Us" listofTheme={aboutUs} link="/" />
         <ListOfLinks title="Contact us" listofTheme={contactUs} link="/" />
         <ListOfLinks

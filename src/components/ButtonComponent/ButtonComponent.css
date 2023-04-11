@@ -1,7 +1,7 @@
-.btn {
-  /* padding: 8px 20px; */
+.btnMain {
+  padding: 8px 20px;
   border-radius: 2px;
-  outline: none;
+  outline: none !important;
   border: none;
   cursor: pointer;
   font-size: 20px;
@@ -9,10 +9,18 @@
   margin-right: 30px;
 }
 
+.btnMain:focus {
+  outline:none;
+  box-shadow: none;
+}
+
+
  /* style */
 .signUp-btn-activ {
   text-decoration: black solid 3px;
 }
+
+
 
 .btn-standart {
   background-color: #fff;
@@ -21,10 +29,13 @@
 }
 
 .btn-standart-black {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   color: white;
   border: 1px solid black;
+  min-width: 150px;
 }
+
+
 .btn-outline {
   background-color: transparent;
   color: #fff;
@@ -34,19 +45,43 @@
   min-width: 150px;
 }
 
+.btn-outline_black {
+  background-color: transparent;
+  color:black;
+  padding-right: 20px;
+  border: 1px solid black;
+  transition: all 1s ease-out;
+  min-width: 150px;
+
+}
+
+
+
 /* form */
 .btn-ellipse {
   border-radius: 8px;
+ 
 }
 
 /* size */
 .btn-medium {
   font-size: 18px;
+  
 }
 
 .btn-large {
   padding: 12px 26px;
   font-size: 20px;
+  
+}
+
+.btn-small {
+  font-size: 20px;
+  padding:7px;
+  min-width: 70px;
+  font-weight: 500;
+
+  
 }
 
 .btn-large:hover,
@@ -55,4 +90,6 @@
   background: #fff;
   color: #242424;
   transition: 250ms;
+ 
 }
+

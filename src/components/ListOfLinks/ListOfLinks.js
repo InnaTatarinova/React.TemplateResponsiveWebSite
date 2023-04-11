@@ -7,7 +7,7 @@ export const ListOfLinks = (props) => {
   return (
     <>
       <div className="listOfLink-container">
-        <h2>{props.title}</h2>
+        <h3 className="footer-h3">{props.title}</h3>
         <Link to={props.link}>{props.listofTheme[0]}
         {(props.icon !== undefined) ? <i className={props.icon[0]}></i> : null}
         </Link>

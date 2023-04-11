@@ -26,11 +26,17 @@ h3 {
   font-size: 17px;
   margin-bottom: 16px;
   border: 0px solid #fff;
-  min-width: 150px;
   width: 300px;
+  height: 50px;
 }
 
-.section-links {
+.footer-subscribe-btn {
+  min-width: 150px;
+  margin-right: 10px;
+  height: 50px;
+}
+
+.footer-section-links {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -52,3 +58,37 @@ h3 {
   margin-top: 20px;
 }
 
+@media screen and (max-width: 650px) {
+  .footer-subscribe-btn {
+    width: 300px;
+    height: 40px;
+  }
+
+  .footer-subscribe-input {
+    height: 40px;
+  }
+
+  .footer-h1 {
+    font-size: 30px;
+  }
+
+  .footer-h2 {
+    font-size: 20px;
+  }
+
+  .footer-h3{
+    font-size: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+.footer-section-links {
+    flex-direction: column;
+    
+  }
+
+}
+
+@media screen and (max-width: 680px) {
+  
+}
