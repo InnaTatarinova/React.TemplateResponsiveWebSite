@@ -6,6 +6,19 @@
   margin-top: 20px;
 }
 
+.budget-expenseBlock{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
+.budget-expenseBlockComponent{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+
 .budgetMainComponent {
   width: 30%;
   height: 70px;
@@ -98,6 +111,17 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  .budget-expenseBlock{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .budget-expenseBlockComponent{
+    width: 100%;
+  }
+
+
 
   .budgetMainComponent {
     width: 45%;

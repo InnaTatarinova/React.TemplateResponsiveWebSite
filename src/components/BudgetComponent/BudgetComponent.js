@@ -18,13 +18,18 @@ export const BudgetComponent = () => {
           <RemainingMoney />
           <TotalExpenses />
         </div>
-        <h3>Expenses</h3>
-        <div>
-          <ExpensesList />
-        </div>
-        <h3>Add Expense</h3>
-        <div>
-          <AddNewExpence />
+        <div className="budget-expenseBlock">
+          <div className="budget-expenseBlockComponent">
+            <h3>Expenses</h3>
+            <ExpensesList />
+          </div>
+
+          <div className="budget-expenseBlockComponent">
+            <h3>Add Expense</h3>
+            <div>
+              <AddNewExpence />
+            </div>
+          </div>
         </div>
       </div>
     </BudgetProvider>

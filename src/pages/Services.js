@@ -3,6 +3,7 @@ import  {BannerForPages}  from "../components/BannerForPages/BannerForPages";
 import  {BudgetComponent}  from "../components/BudgetComponent/BudgetComponent";
 import service_banner from "../assets/img/service_banner2.jpg";
 import "../App.css";
+import { HotelComponent } from "../components/HotelComponent/HotelComponent";
 
 
 
@@ -53,7 +54,9 @@ export const Services = () => {
   
         <div className="mainPageInfo">
           {wasClickedHotel === true ? (
-            <div>Hotel</div>
+            <div>
+              <HotelComponent/>
+            </div>
           ) : wasClickedCar === true ? (
             <div>Car</div>
           ) : wasClickedBudget === true ? (
