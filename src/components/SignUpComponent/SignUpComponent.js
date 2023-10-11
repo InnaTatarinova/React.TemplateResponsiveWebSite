@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./SignUpComponent.css";
 import "../ButtonComponent/ButtonComponent.css";
 import {ButtonComponent} from "../ButtonComponent/ButtonComponent";
 
 export const SignUpComponent = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+ }, []);
+
+
   const [signUpBtn, clickSignUpBtn] = useState(true);
 
   const handleClick = () => {

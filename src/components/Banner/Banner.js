@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {ButtonComponent} from "../ButtonComponent/ButtonComponent";
+import { ButtonComponent } from "../ButtonComponent/ButtonComponent";
 import "./Banner.css";
 import banner1 from "../../assets/img/banner_1.jpg";
 import banner2 from "../../assets/img/banner_2.jpg";
@@ -8,6 +8,7 @@ import banner4 from "../../assets/img/banner_4.jpg";
 import banner5 from "../../assets/img/banner_5.jpg";
 import banner6 from "../../assets/img/banner_6.jpg";
 import banner7 from "../../assets/img/banner_7.jpg";
+import trailer from "../../assets/video/trailer.mp4";
 import { Link } from "react-router-dom";
 
 const imageList = [
@@ -22,6 +23,11 @@ const imageList = [
 
 export const Banner = () => {
   const [imageIndex, setImageIndex] = useState(0);
+  const [clickWatchTrailer, setClickWatchTrailer] = useState(false);
+
+  const watchTrailer = () => {
+    setClickWatchTrailer(!clickWatchTrailer);
+  };
 
   useEffect(() => {
     const intervalTime = setInterval(() => {
@@ -37,36 +43,42 @@ export const Banner = () => {
 
   return (
     <div>
-      <div className="banner-container">
-        <img
-          className="banner-img"
-          src={imageList[imageIndex]}
-          alt="nature view"
-        />
-        <h1 className="banner-h1">Trip is waiting you...</h1>
-        <p className="banner-p"> But WHAT are YOU waiting for?</p>
-        <div className="banner-btn-conteiner">
-          <Link to="/products">
-            <ButtonComponent
-              className="banner-btn"
-              btnStyle="btn-outline"
-              btnSize="btn-large"
-            >
-              GET STARTED
-            </ButtonComponent>
-          </Link>
-          <Link to="/services">
+      {clickWatchTrailer === true ? (
+        <div className="banner-container">
+          <video  className="banner-img" src={trailer} autoPlay onEnded={watchTrailer}/>
+        </div>
+      ) : (
+        <div className="banner-container">
+          <img
+            className="banner-img"
+            src={imageList[imageIndex]}
+            alt="nature view"
+          />
+          <h1 className="banner-h1">Trip is waiting you...</h1>
+          <p className="banner-p"> But WHAT are YOU waiting for?</p>
+          <div className="banner-btn-conteiner">
+            <Link to="/products">
+              <ButtonComponent
+                className="banner-btn"
+                btnStyle="btn-outline"
+                btnSize="btn-large"
+              >
+                GET STARTED
+              </ButtonComponent>
+            </Link>
+
             <ButtonComponent
               className="banner-btn"
               btnStyle="btn-standart"
               btnSize="btn-large"
+              onClick={watchTrailer}
             >
               WATCH TRAILER
               <i className="bi bi-play-circle-fill" path="/"></i>
             </ButtonComponent>
-          </Link>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

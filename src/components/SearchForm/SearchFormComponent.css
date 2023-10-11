@@ -1,0 +1,257 @@
+.search-component {
+  display: flex;
+  flex-direction: row;
+  font-size: 25px;
+  justify-content: center;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.search {
+  height: 56px;
+  border-radius: 8px;
+  border: 1px black solid;
+  text-align: left;
+  align-items: center;
+  margin-right: 10px;
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding-left: 10px;
+}
+
+.search-input {
+  width: 22%;
+}
+
+.search:hover {
+  transition: all 1s ease-out;
+  background: #bdb7b7;
+  color: #242424;
+  transition: 250ms;
+}
+
+.search-icon {
+  margin: 15px;
+  margin-left: 0px;
+}
+
+.search_city {
+  height: 300px;
+  border-radius: 8px;
+  border: 1px black solid;
+  text-align: left;
+  margin: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: relative;
+  margin-bottom: 10px;
+  width: 22%;
+}
+
+.search-treveler-component {
+  width: 15%;
+  height: 200px;
+  font-size: 18px;
+  
+}
+
+.search_city_input {
+  border: none;
+  align-items: center;
+  margin: 0px 10px;
+  height: 53px;
+}
+
+.search_city_input:focus {
+  outline: none;
+}
+
+hr {
+  margin: 0px;
+}
+
+.search_city_result {
+  font-size: 18px;
+  height: 200px;
+  margin: 10px;
+  position: sticky;
+}
+
+.searchBtn {
+  height: 56px;
+}
+
+.cityNameList {
+  padding-left: 20px;
+  height: 230px;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin-bottom: 3px;
+}
+
+.searchDate-calendar {
+  width: 15%;
+  min-width: 300px;
+  margin-right: 10px;
+}
+
+.react-calendar {
+  background-color: #fff;
+  color: #222;
+  border-radius: 8px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  border: 2px solid #0a0a09;
+  line-height: 1.125em;
+  font-size: 15px;
+}
+.react-calendar__navigation button {
+  color: #1a191b;
+  min-width: 44px;
+  background: none;
+  font-size: 16px;
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.search-treveler {
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+  margin: 5px;
+}
+
+.search-treveler-category {
+  width: 75%;
+}
+
+.search-treveler-quantity{
+  margin-left: 10px;
+
+}
+
+.moveBi:hover{
+  transition: all ease-out;
+  transform: scale(1.2);
+  cursor: pointer;
+  
+}
+
+.searchTrevelerBtn{
+  width: 30px;
+  height: 40px;
+  margin: 5px 2px;
+  font-size: 15px;
+  margin-left: 65%;
+  
+}
+
+tr{
+  font-size: 20px;
+}
+
+tr:hover{
+  cursor: pointer;
+}
+
+.table{
+  margin: 20px;
+  width: 97%;
+}
+
+
+@media screen and (max-width: 1750px) {
+  .search-component {
+    font-size: 21px;
+    margin: 20px;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 1530px) {
+  .search-component {
+    flex-wrap: wrap;
+  }
+
+  .search {
+    width: 45%;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+
+  .search-input {
+    width: 92%;
+  }
+
+  .search-input-city {
+    width: 45%;
+  }
+
+  .search_city {
+    width: 92%;
+  }
+
+  .searchDate-calendar {
+    width: 45%;
+    margin-bottom: 10px;
+  }
+
+  .react-calendar {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .search-treveler-component {
+    width: 45%;
+  }
+
+  .searchTrevelerBtn{
+    width: 30px;
+    height: 40px;
+    margin: 5px 2px;
+    font-size: 15px;
+    margin-left: 75%;
+    
+  }
+
+}
+
+@media screen and (max-width: 860px) {
+  .search-component {
+    flex-direction: column;
+  }
+
+  .search {
+    height: 55px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    width: 96%;
+  }
+
+  .search_city {
+    width: 96%;
+  }
+
+  .searchBtn {
+    height: 56px;
+    margin: 10px;
+    padding: 0px;
+  }
+
+  .searchDate-calendar {
+    width: 96%;
+    margin-bottom: 10px;
+  }
+
+  .react-calendar {
+    font-size: 18px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .search-treveler-component {
+    width: 96%;
+  }
+}

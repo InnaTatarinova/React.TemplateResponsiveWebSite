@@ -18,7 +18,6 @@ export const MainViewBudgetComponent = (props) => {
   };
 
   const saveBudget = () => {
-    let i = 0;
     dispatch({
       type: "CHANGE_BUDGET",
       payload: value,

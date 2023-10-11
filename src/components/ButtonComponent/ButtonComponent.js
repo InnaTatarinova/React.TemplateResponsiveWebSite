@@ -1,11 +1,11 @@
 import React from "react";
 import "./ButtonComponent.css";
 
-export const ButtonComponent = ({ children, className, btnStyle, btnSize, btnForm, onClick}) => {
+export const ButtonComponent = ({ children, className, btnStyle, btnSize, btnForm, onClick, disabled}) => {
   const STYLES = ["btn-standart","btn-standart-black","btn-standart-blue", "btn-outline", "btn-test"];
   const SIZES = ["btn-medium", "btn-small","btn-large"];
   const FORM = ["btn-rectangle","btn-ellipse"];
-  const CLASSNAME =["", "banner-btn", "footer-subscribe-btn", "btnServiceList"];
+  const CLASSNAME =["", "banner-btn", "footer-subscribe-btn", "btnServiceList", "searchBtn", "searchTrevelerBtn"];
 
   const checkBtnStyle = STYLES.includes(btnStyle) ? btnStyle : STYLES[0];
 
@@ -18,6 +18,7 @@ export const ButtonComponent = ({ children, className, btnStyle, btnSize, btnFor
   return (
     
         <button
+        disabled = {disabled}
         onClick={onClick}
         className={`btnMain ${checkBtnClassName} ${checkBtnStyle} ${checkBtnSize} ${checkBtnForm}`}
       >

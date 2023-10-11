@@ -128,7 +128,7 @@
   }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 850px) {
   .budgetList {
     display: flex;
     flex-wrap: wrap;
@@ -138,5 +138,8 @@
     width: 90%;
     
   }
+
+
+  
 }
 
